@@ -56,3 +56,31 @@
   ![flashboot](images/flashboot.png)
 
 Khởi động lại Hệ thống bằng cách giữ âm lượng và nguồn cho đến khi điện thoại của bạn tắt màn hình, sau đó thả tay ra.
+
+# Cài ROM GSI
+
+cài trước rom base 
+
+adb reboot fastboot
+
+fastboot flash boot_a C:\Users\Admin\Desktop\a\boot_OFOXRECOVERY.img && fastboot flash boot_b C:\Users\Admin\Desktop\a\boot_OFOXRECOVERY.img
+
+adb sideload C:\Users\Admin\Downloads\DerpFest-11-mh2lm-20230309-0419.zip
+
+vào lại recovery của ROM vừa flash, sau đó up lại rom lần nữa
+
+wipe data
+
+khởi động hệ thống đầy đủ
+
+GSI
+
+adb reboot fastboot
+
+fastboot --disable-verity --disable-verification flash vbmeta C:\Users\Admin\AppData\Roaming\Qualcomm\QFIL\COMPORT_15\vbmeta.img
+
+fastboot flash system C:\Users\Admin\Downloads\ProjectSakura\ProjectSakura_A14-RO-arm64-bgN-slim_20240521.img
+
+fastboot flash boot C:\Users\Admin\Desktop\a\boot_OFOXRECOVERY.img
+
+wipedata bằng recovery

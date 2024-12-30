@@ -59,6 +59,8 @@ Khởi động lại Hệ thống bằng cách giữ âm lượng và nguồn ch
 
 # Cài ROM GSI
 
+fastboot erase userdata
+
 cài trước rom base 
 
 adb reboot fastboot
